@@ -23,16 +23,16 @@ const consoleFormat = winston.format.combine(
 );
 
 // Create logger instance
-export const logger = winston.createLogger({
-  level: env.LOG_LEVEL,
-  format: logFormat,
-  defaultMeta: { service: 'echannelling-backend' },
-  transports: [
-    // Console transport
-    new winston.transports.Console({
-      format: env.NODE_ENV === 'development' ? consoleFormat : logFormat,
-    }),
-    
+const transports: winston.transport[] = [
+  // Console transport
+  new winston.transports.Console({
+    format: env.NODE_ENV === 'development' ? consoleFormat : logFormat,
+  }),
+];
+
+// Add file transports only in development environment
+if (env.NODE_ENV === 'development') {
+  transports.push(
     // File transport for errors
     new winston.transports.File({
       filename: path.join('logs', 'error.log'),
@@ -46,15 +46,24 @@ export const logger = winston.createLogger({
       filename: path.join('logs', 'combined.log'),
       maxsize: 5242880, // 5MB
       maxFiles: 5,
-    }),
-  ],
+    })
+  );
+}
+
+export const logger = winston.createLogger({
+  level: env.LOG_LEVEL,
+  format: logFormat,
+  defaultMeta: { service: 'echannelling-backend' },
+  transports,
 });
 
-// Create logs directory if it doesn't exist
+// Create logs directory if it doesn't exist (only in development)
 import fs from 'fs';
-const logsDir = path.join(process.cwd(), 'logs');
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
+if (env.NODE_ENV === 'development') {
+  const logsDir = path.join(process.cwd(), 'logs');
+  if (!fs.existsSync(logsDir)) {
+    fs.mkdirSync(logsDir, { recursive: true });
+  }
 }
 
 export default logger;
