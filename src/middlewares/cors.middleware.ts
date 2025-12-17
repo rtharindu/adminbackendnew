@@ -14,6 +14,8 @@ const corsOptions = {
     if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      console.log('CORS blocked origin:', origin);
+      console.log('Allowed origins:', allowedOrigins);
       callback(new Error('Not allowed by CORS'));
     }
   },
@@ -30,6 +32,7 @@ const corsOptions = {
   ],
   exposedHeaders: ['X-Total-Count', 'X-Page-Count'],
   maxAge: 86400, // 24 hours
+  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
 };
 
 export const corsMiddleware = cors(corsOptions);

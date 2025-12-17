@@ -20,6 +20,9 @@ import agentRoutes from './routes/agents.routes';
 
 const app = express();
 
+// Trust proxy for Vercel
+app.set('trust proxy', 1);
+
 // Security middleware
 app.use(helmet({
   contentSecurityPolicy: {
