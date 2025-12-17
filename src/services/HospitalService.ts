@@ -1,5 +1,5 @@
-import { prisma } from '@/config/database';
-import { logger } from '@/config/logger';
+import { prisma } from './config/database';
+import { logger } from './config/logger';
 
 export class HospitalService {
   async getAllHospitals(): Promise<any[]> {

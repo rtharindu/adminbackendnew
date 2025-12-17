@@ -4,10 +4,10 @@ import { AgentController,
   updateAgentSchema, 
   agentQuerySchema, 
   agentParamsSchema 
-} from '@/controllers/AgentController';
-import { validate } from '@/middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from '@/middlewares/auth.middleware';
-import { requireRole } from '@/middlewares/role.middleware';
+} from './controllers/AgentController';
+import { validate } from './middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
+import { requireRole } from './middlewares/role.middleware';
 import { UserRole } from '@prisma/client';
 
 const router = Router();

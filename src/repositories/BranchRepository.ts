@@ -1,6 +1,6 @@
 import { Prisma, Branch, BranchType } from '@prisma/client';
-import { prisma } from '@/config/database';
-import { BranchListQuery, BranchStats } from '@/types/branch';
+import { prisma } from './config/database';
+import { BranchListQuery, BranchStats } from './types/branch';
 
 export class BranchRepository {
   async create(data: Prisma.BranchCreateInput): Promise<Branch> {

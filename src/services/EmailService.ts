@@ -1,6 +1,6 @@
-import { sendEmail, emailTemplates } from '@/config/mailer';
-import { logger } from '@/config/logger';
-import { InvoiceResponse } from '@/types/invoice';
+import { sendEmail, emailTemplates } from './config/mailer';
+import { logger } from './config/logger';
+import { InvoiceResponse } from './types/invoice';
 
 export class EmailService {
   async sendWelcomeEmail(email: string, name: string): Promise<boolean> {

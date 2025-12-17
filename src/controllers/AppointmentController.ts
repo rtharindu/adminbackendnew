@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { AppointmentStatus, PaymentStatus, Gender } from '@prisma/client';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
 
 // Validation schemas
 const createAppointmentSchema = z.object({

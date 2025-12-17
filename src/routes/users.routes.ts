@@ -4,10 +4,10 @@ import { UserController,
   updateUserSchema, 
   userQuerySchema, 
   userParamsSchema 
-} from '@/controllers/UserController';
-import { validate } from '@/middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from '@/middlewares/auth.middleware';
-import { requirePermission, requireAdmin } from '@/middlewares/role.middleware';
+} from './controllers/UserController';
+import { validate } from './middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
+import { requirePermission, requireAdmin } from './middlewares/role.middleware';
 
 const router = Router();
 const userController = new UserController();

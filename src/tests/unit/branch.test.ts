@@ -1,4 +1,4 @@
-import { BranchService } from '@/services/BranchService';
+import { BranchService } from './services/BranchService';
 import { prisma } from '../setup';
 import { BranchType } from '@prisma/client';
 

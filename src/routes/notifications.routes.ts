@@ -3,10 +3,10 @@ import { NotificationController,
   sendNotificationSchema, 
   sendBulkEmailSchema, 
   sendCustomEmailSchema 
-} from '@/controllers/NotificationController';
-import { validate } from '@/middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from '@/middlewares/auth.middleware';
-import { requirePermission } from '@/middlewares/role.middleware';
+} from './controllers/NotificationController';
+import { validate } from './middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
+import { requirePermission } from './middlewares/role.middleware';
 
 const router = Router();
 const notificationController = new NotificationController();

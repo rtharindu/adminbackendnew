@@ -4,10 +4,10 @@ import { BranchController,
   updateBranchSchema, 
   branchQuerySchema, 
   branchParamsSchema 
-} from '@/controllers/BranchController';
-import { validate } from '@/middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from '@/middlewares/auth.middleware';
-import { requirePermission } from '@/middlewares/role.middleware';
+} from './controllers/BranchController';
+import { validate } from './middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
+import { requirePermission } from './middlewares/role.middleware';
 
 const router = Router();
 const branchController = new BranchController();

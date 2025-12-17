@@ -1,7 +1,7 @@
-import { AuditRepository } from '@/repositories/AuditRepository';
-import { sendMessage, TOPICS } from '@/config/kafka';
-import { logger } from '@/config/logger';
-import { AuditLogData } from '@/types';
+import { AuditRepository } from './repositories/AuditRepository';
+import { sendMessage, TOPICS } from './config/kafka';
+import { logger } from './config/logger';
+import { AuditLogData } from './types';
 
 export class AuditService {
   private auditRepository = new AuditRepository();

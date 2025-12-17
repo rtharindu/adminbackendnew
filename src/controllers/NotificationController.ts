@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { EmailService } from '@/services/EmailService';
-import { DashboardService } from '@/services/DashboardService';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
+import { EmailService } from './services/EmailService';
+import { DashboardService } from './services/DashboardService';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
 
 // Validation schemas
 const sendNotificationSchema = z.object({

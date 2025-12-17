@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { UserRole } from '@prisma/client';
-import { AuthService } from '@/services/AuthService';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
+import { AuthService } from './services/AuthService';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
 
 // Validation schemas
 const loginSchema = z.object({

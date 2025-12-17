@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { DashboardService } from '@/services/DashboardService';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
+import { DashboardService } from './services/DashboardService';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
 
 // Validation schemas
 const analyticsQuerySchema = z.object({

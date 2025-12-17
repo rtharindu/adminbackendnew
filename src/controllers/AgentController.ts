@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
-import { prisma } from '@/config/database';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
+import { prisma } from './config/database';
 
 // Type assertion for Agent model since Prisma client generation has permission issues
 type Agent = {

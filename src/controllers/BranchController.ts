@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { BranchType } from '@prisma/client';
-import { BranchService } from '@/services/BranchService';
-import { ResponseHelper } from '@/utils/response';
-import { asyncHandler } from '@/middlewares/error.middleware';
-import { logger } from '@/config/logger';
+import { BranchService } from './services/BranchService';
+import { ResponseHelper } from './utils/response';
+import { asyncHandler } from './middlewares/error.middleware';
+import { logger } from './config/logger';
 
 // Validation schemas
 const createBranchSchema = z.object({

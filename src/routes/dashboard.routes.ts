@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { DashboardController, analyticsQuerySchema } from '@/controllers/DashboardController';
-import { validate } from '@/middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from '@/middlewares/auth.middleware';
-import { requirePermission } from '@/middlewares/role.middleware';
+import { DashboardController, analyticsQuerySchema } from './controllers/DashboardController';
+import { validate } from './middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
+import { requirePermission } from './middlewares/role.middleware';
 
 const router = Router();
 const dashboardController = new DashboardController();
