@@ -133,7 +133,7 @@ export class AuthService {
       data: {
         email,
         password: hashedPassword,
-        name,
+        name: name || 'Unknown User',
         role,
       },
     });
