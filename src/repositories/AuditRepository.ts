@@ -26,8 +26,7 @@ export class AuditRepository {
           select: {
             id: true,
             email: true,
-            firstName: true,
-            lastName: true,
+            name: true,
           },
         },
       },
@@ -106,9 +105,8 @@ export class AuditRepository {
             select: {
               id: true,
               email: true,
-              firstName: true,
-              lastName: true,
-            },
+              name: true,
+                          },
           },
         },
       }),
@@ -214,8 +212,7 @@ export class AuditRepository {
           select: {
             id: true,
             email: true,
-            firstName: true,
-            lastName: true,
+            name: true,
           },
         },
       },
@@ -234,8 +231,7 @@ export class AuditRepository {
           select: {
             id: true,
             email: true,
-            firstName: true,
-            lastName: true,
+            name: true,
           },
         },
       },
