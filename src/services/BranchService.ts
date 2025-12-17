@@ -1,6 +1,6 @@
 import { BranchType } from '@prisma/client';
 import { BranchRepository } from '../repositories/BranchRepository';
-import { AuditService } from '../AuditService';
+import { AuditService } from './AuditService';
 import { sendMessage, TOPICS } from '../config/kafka';
 import { logger } from '../config/logger';
 import {

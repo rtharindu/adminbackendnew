@@ -3,7 +3,7 @@ import { UserRole } from '@prisma/client';
 import { prisma } from '../config/database';
 import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '../config/jwt';
 import { logger } from '../config/logger';
-import { AuditService } from '../AuditService';
+import { AuditService } from './AuditService';
 import crypto from 'crypto';
 import {
   LoginRequest,

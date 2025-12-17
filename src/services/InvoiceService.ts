@@ -1,8 +1,8 @@
 import { InvoiceStatus } from '@prisma/client';
 import { InvoiceRepository } from '../repositories/InvoiceRepository';
 import { BranchRepository } from '../repositories/BranchRepository';
-import { AuditService } from '../AuditService';
-import { EmailService } from '../EmailService';
+import { AuditService } from './AuditService';
+import { EmailService } from './EmailService';
 import { sendMessage, TOPICS } from '../config/kafka';
 import { logger } from '../config/logger';
 import {
