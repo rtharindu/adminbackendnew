@@ -4,8 +4,8 @@
   "description": "RESTful API for hospital & doctor channeling platform",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc --noEmitOnError false --skipLibCheck",
-    "start": "node dist/server.js",
+    "build": "mkdir -p dist && cp -r src/* dist/ && cp package.json dist/",
+    "start": "ts-node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "test": "jest",
     "test:watch": "jest --watch",
