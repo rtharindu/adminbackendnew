@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { UserRole } from '@prisma/client';
-import { PermissionChecker } from './utils/permissions';
-import { ResponseHelper } from './utils/response';
+import { PermissionChecker } from '../utils/permissions';
+import { ResponseHelper } from '../utils/response';
 
 export const requireRole = (...roles: UserRole[]) => {
   return (req: Request, res: Response, next: NextFunction): void => {

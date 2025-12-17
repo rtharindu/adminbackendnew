@@ -12,7 +12,7 @@ export const mockSendMessage = jest.fn().mockResolvedValue(undefined as any);
 export const mockSubscribeToTopic = jest.fn().mockResolvedValue(undefined as any);
 
 // Mock Kafka configuration
-jest.mock('./config/kafka', () => ({
+jest.mock('../config/kafka', () => ({
   connectKafka: jest.fn().mockResolvedValue(undefined as any),
   disconnectKafka: jest.fn().mockResolvedValue(undefined as any),
   sendMessage: mockSendMessage,
@@ -33,7 +33,7 @@ jest.mock('./config/kafka', () => ({
 }));
 
 // Mock email service
-jest.mock('./services/EmailService', () => ({
+jest.mock('../services/EmailService', () => ({
   EmailService: jest.fn().mockImplementation(() => ({
     sendWelcomeEmail: jest.fn().mockResolvedValue(true as any),
     sendPasswordResetEmail: jest.fn().mockResolvedValue(true as any),
@@ -45,7 +45,7 @@ jest.mock('./services/EmailService', () => ({
 }));
 
 // Mock audit service
-jest.mock('./services/AuditService', () => ({
+jest.mock('../services/AuditService', () => ({
   AuditService: jest.fn().mockImplementation(() => ({
     log: jest.fn().mockResolvedValue(undefined as any),
     getAuditLogs: jest.fn().mockResolvedValue({ auditLogs: [], total: 0, page: 1, limit: 10, totalPages: 0 } as any),

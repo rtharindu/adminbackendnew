@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyAccessToken } from './config/jwt';
-import { prisma } from './config/database';
-import { ResponseHelper } from './utils/response';
-import { logger } from './config/logger';
+import { verifyAccessToken } from '../config/jwt';
+import { prisma } from '../config/database';
+import { ResponseHelper } from '../utils/response';
+import { logger } from '../config/logger';
 
 export const authenticateToken = async (
   req: Request,

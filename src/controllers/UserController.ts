@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { UserRole } from '@prisma/client';
-import { UserRepository } from './repositories/UserRepository';
-import { AuditService } from './services/AuditService';
-import { ResponseHelper } from './utils/response';
-import { asyncHandler } from './middlewares/error.middleware';
-import { logger } from './config/logger';
+import { UserRepository } from '../repositories/UserRepository';
+import { AuditService } from '../services/AuditService';
+import { ResponseHelper } from '../utils/response';
+import { asyncHandler } from '../middlewares/error.middleware';
+import { logger } from '../config/logger';
 
 // Validation schemas
 const createUserSchema = z.object({

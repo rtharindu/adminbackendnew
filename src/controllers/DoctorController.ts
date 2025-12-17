@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { DoctorStatus } from '@prisma/client';
-import { DoctorService } from './services/DoctorService';
-import { ResponseHelper } from './utils/response';
-import { asyncHandler } from './middlewares/error.middleware';
-import { logger } from './config/logger';
+import { DoctorService } from '../services/DoctorService';
+import { ResponseHelper } from '../utils/response';
+import { asyncHandler } from '../middlewares/error.middleware';
+import { logger } from '../config/logger';
 
 // Validation schemas
 const createDoctorSchema = z.object({

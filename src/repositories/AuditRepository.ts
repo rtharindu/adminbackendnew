@@ -1,6 +1,6 @@
 import { Prisma, AuditLog } from '@prisma/client';
-import { prisma } from './config/database';
-import { AuditLogData } from './types';
+import { prisma } from '../config/database';
+import { AuditLogData } from '../types';
 
 export class AuditRepository {
   async create(data: AuditLogData): Promise<AuditLog> {

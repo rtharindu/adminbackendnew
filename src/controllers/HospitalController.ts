@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { HospitalStatus } from '@prisma/client';
-import { HospitalService } from './services/HospitalService';
-import { ResponseHelper } from './utils/response';
-import { asyncHandler } from './middlewares/error.middleware';
-import { logger } from './config/logger';
+import { HospitalService } from '../services/HospitalService';
+import { ResponseHelper } from '../utils/response';
+import { asyncHandler } from '../middlewares/error.middleware';
+import { logger } from '../config/logger';
 
 // Validation schemas
 const createHospitalSchema = z.object({

@@ -1,9 +1,9 @@
 import bcrypt from 'bcryptjs';
 import { UserRole } from '@prisma/client';
-import { prisma } from './config/database';
-import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from './config/jwt';
-import { logger } from './config/logger';
-import { AuditService } from './AuditService';
+import { prisma } from '../config/database';
+import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '../config/jwt';
+import { logger } from '../config/logger';
+import { AuditService } from '../AuditService';
 import crypto from 'crypto';
 import {
   LoginRequest,
@@ -13,7 +13,7 @@ import {
   ForgotPasswordRequest,
   ResetPasswordRequest,
   ChangePasswordRequest,
-} from './types/auth';
+} from '../types/auth';
 
 export class AuthService {
   private auditService = new AuditService();

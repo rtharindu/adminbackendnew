@@ -1,10 +1,10 @@
 import { InvoiceStatus } from '@prisma/client';
-import { InvoiceRepository } from './repositories/InvoiceRepository';
-import { BranchRepository } from './repositories/BranchRepository';
-import { AuditService } from './AuditService';
-import { EmailService } from './EmailService';
-import { sendMessage, TOPICS } from './config/kafka';
-import { logger } from './config/logger';
+import { InvoiceRepository } from '../repositories/InvoiceRepository';
+import { BranchRepository } from '../repositories/BranchRepository';
+import { AuditService } from '../AuditService';
+import { EmailService } from '../EmailService';
+import { sendMessage, TOPICS } from '../config/kafka';
+import { logger } from '../config/logger';
 import {
   CreateInvoiceRequest,
   UpdateInvoiceRequest,
@@ -12,7 +12,7 @@ import {
   InvoiceListQuery,
   InvoiceStats,
   PaymentRequest,
-} from './types/invoice';
+} from '../types/invoice';
 
 export class InvoiceService {
   private invoiceRepository = new InvoiceRepository();

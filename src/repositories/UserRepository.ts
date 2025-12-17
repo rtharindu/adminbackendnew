@@ -1,6 +1,6 @@
 import { Prisma, User, UserRole } from '@prisma/client';
-import { prisma } from './config/database';
-import { UserListQuery, UserStats } from './types/user';
+import { prisma } from '../config/database';
+import { UserListQuery, UserStats } from '../types/user';
 
 export class UserRepository {
   async create(data: Prisma.UserCreateInput): Promise<User> {

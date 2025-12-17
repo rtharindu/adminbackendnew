@@ -4,10 +4,10 @@ import { HospitalController,
   updateHospitalSchema, 
   hospitalParamsSchema,
   hospitalQuerySchema 
-} from './controllers/HospitalController';
-import { validate } from './middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
-import { requirePermission } from './middlewares/role.middleware';
+} from '../controllers/HospitalController';
+import { validate } from '../middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from '../middlewares/auth.middleware';
+import { requirePermission } from '../middlewares/role.middleware';
 import { z } from 'zod';
 
 const router = Router();

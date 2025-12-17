@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from './app';
+import app from '../app';
 import { prisma } from '../setup';
 import { UserRole } from '@prisma/client';
 

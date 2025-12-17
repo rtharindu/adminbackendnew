@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import { env } from './env';
-import { logger } from './logger';
+import { env } from '../env';
+import { logger } from '../logger';
 
 // Check if email configuration is available
 const isEmailConfigured = env.EMAIL_HOST && env.EMAIL_USER && env.EMAIL_PASS;

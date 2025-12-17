@@ -1,15 +1,15 @@
 import { BranchType } from '@prisma/client';
-import { BranchRepository } from './repositories/BranchRepository';
-import { AuditService } from './AuditService';
-import { sendMessage, TOPICS } from './config/kafka';
-import { logger } from './config/logger';
+import { BranchRepository } from '../repositories/BranchRepository';
+import { AuditService } from '../AuditService';
+import { sendMessage, TOPICS } from '../config/kafka';
+import { logger } from '../config/logger';
 import {
   CreateBranchRequest,
   UpdateBranchRequest,
   BranchResponse,
   BranchListQuery,
   BranchStats,
-} from './types/branch';
+} from '../types/branch';
 
 export class BranchService {
   private branchRepository = new BranchRepository();

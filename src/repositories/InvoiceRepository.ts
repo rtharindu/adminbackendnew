@@ -1,6 +1,6 @@
 import { Prisma, Invoice, InvoiceStatus } from '@prisma/client';
-import { prisma } from './config/database';
-import { InvoiceListQuery, InvoiceStats } from './types/invoice';
+import { prisma } from '../config/database';
+import { InvoiceListQuery, InvoiceStats } from '../types/invoice';
 
 export class InvoiceRepository {
   async create(data: Prisma.InvoiceCreateInput): Promise<Invoice> {

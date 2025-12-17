@@ -5,10 +5,10 @@ import { InvoiceController,
   paymentSchema,
   invoiceQuerySchema, 
   invoiceParamsSchema 
-} from './controllers/InvoiceController';
-import { validate } from './middlewares/validate.middleware';
-import { authenticateToken, requireActiveUser } from './middlewares/auth.middleware';
-import { requirePermission } from './middlewares/role.middleware';
+} from '../controllers/InvoiceController';
+import { validate } from '../middlewares/validate.middleware';
+import { authenticateToken, requireActiveUser } from '../middlewares/auth.middleware';
+import { requirePermission } from '../middlewares/role.middleware';
 
 const router = Router();
 const invoiceController = new InvoiceController();

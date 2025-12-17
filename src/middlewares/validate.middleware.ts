@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { ZodSchema, ZodError } from 'zod';
-import { ResponseHelper } from './utils/response';
-import { logger } from './config/logger';
+import { ResponseHelper } from '../utils/response';
+import { logger } from '../config/logger';
 
 export const validate = (schema: ZodSchema) => {
   return (req: Request, res: Response, next: NextFunction): void => {

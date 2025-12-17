@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { JwtPayload } from './auth';
+import { JwtPayload } from '../auth';
 
 // Extend Express Request interface to include user
 declare global {

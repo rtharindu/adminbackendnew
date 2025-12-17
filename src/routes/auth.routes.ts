@@ -7,9 +7,9 @@ import { AuthController,
   resetPasswordSchema, 
   changePasswordSchema,
   verifyOTPSchema
-} from './controllers/AuthController';
-import { validate } from './middlewares/validate.middleware';
-import { authenticateToken } from './middlewares/auth.middleware';
+} from '../controllers/AuthController';
+import { validate } from '../middlewares/validate.middleware';
+import { authenticateToken } from '../middlewares/auth.middleware';
 
 const router = Router();
 const authController = new AuthController();

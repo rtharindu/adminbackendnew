@@ -2,21 +2,21 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import { env } from './config/env';
-import { logger } from './config/logger';
-import { corsMiddleware, corsPreflight } from './middlewares/cors.middleware';
-import { errorHandler, notFoundHandler } from './middlewares/error.middleware';
+import { env } from '../config/env';
+import { logger } from '../config/logger';
+import { corsMiddleware, corsPreflight } from '../middlewares/cors.middleware';
+import { errorHandler, notFoundHandler } from '../middlewares/error.middleware';
 
 // Import routes
-import authRoutes from './routes/auth.routes';
-import branchRoutes from './routes/branches.routes';
-import invoiceRoutes from './routes/invoices.routes';
-import dashboardRoutes from './routes/dashboard.routes';
-import userRoutes from './routes/users.routes';
-import notificationRoutes from './routes/notifications.routes';
-import doctorRoutes from './routes/doctors.routes';
-import hospitalRoutes from './routes/hospitals.routes';
-import agentRoutes from './routes/agents.routes';
+import authRoutes from '../routes/auth.routes';
+import branchRoutes from '../routes/branches.routes';
+import invoiceRoutes from '../routes/invoices.routes';
+import dashboardRoutes from '../routes/dashboard.routes';
+import userRoutes from '../routes/users.routes';
+import notificationRoutes from '../routes/notifications.routes';
+import doctorRoutes from '../routes/doctors.routes';
+import hospitalRoutes from '../routes/hospitals.routes';
+import agentRoutes from '../routes/agents.routes';
 
 const app = express();
 

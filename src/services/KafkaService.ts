@@ -1,5 +1,5 @@
-import { connectKafka, disconnectKafka, subscribeToTopic, TOPICS } from './config/kafka';
-import { logger } from './config/logger';
+import { connectKafka, disconnectKafka, subscribeToTopic, TOPICS } from '../config/kafka';
+import { logger } from '../config/logger';
 
 export class KafkaService {
   private isConnected = false;

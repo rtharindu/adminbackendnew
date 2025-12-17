@@ -1,6 +1,6 @@
 import { Kafka, Producer, Consumer } from 'kafkajs';
-import { env } from './env';
-import { logger } from './logger';
+import { env } from '../env';
+import { logger } from '../logger';
 
 // Create Kafka instance
 const kafka = new Kafka({
