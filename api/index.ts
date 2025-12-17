@@ -1,7 +1,7 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-import app from './app';
+import { Request, Response } from 'express';
+import app from '../src/app';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: Request, res: Response) {
   try {
     // Forward the request to the Express app
     app(req, res);
